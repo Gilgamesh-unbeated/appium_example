@@ -23,7 +23,22 @@ public class BeforeTest extends ParentTest
 	@Test
 	public void before() 
 	{
-		LogUtils.info("begin");
+		LogUtils.info("---begin---");
+		openApp();
+		closeRemind();
+	}
+	
+	/**
+	 * 打开app后，会弹出弹窗，关闭该弹窗
+	 */
+	private void closeRemind() 
+	{
+		String code= driver.getPageSource();
+		LogUtils.info("code:"+code);
+		
+	}
+
+	public void openApp() {
 		DesiredCapabilities cap=new DesiredCapabilities();
 		cap.setCapability(CapabilityType.BROWSER_NAME, "");
 		//指定测试平台
@@ -40,13 +55,11 @@ public class BeforeTest extends ParentTest
 			//这里控制是android还是ios,由于暂
 			//时只有android，所以不考虑将手机类型放到配置文件中
 			driver=new AndroidDriver<WebElement>(new URL(Constants.ANDROID_URL), cap);
-			LogUtils.info("driver:"+driver.toString());
 			ta=new TouchAction((AppiumDriver) driver);
 		} catch (MalformedURLException e) {
 			LogUtils.error("初始化失败");
 			assertThat(false).as("初始化失败");
 		}
-		
 	}
 
 }
