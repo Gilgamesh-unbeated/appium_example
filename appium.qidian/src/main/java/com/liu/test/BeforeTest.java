@@ -25,18 +25,8 @@ public class BeforeTest extends ParentTest
 	{
 		LogUtils.info("---begin---");
 		openApp();
-		closeRemind();
 	}
 	
-	/**
-	 * 打开app后，会弹出弹窗，关闭该弹窗
-	 */
-	private void closeRemind() 
-	{
-		String code= driver.getPageSource();
-		LogUtils.info("code:"+code);
-		
-	}
 
 	public void openApp() {
 		DesiredCapabilities cap=new DesiredCapabilities();
@@ -61,5 +51,7 @@ public class BeforeTest extends ParentTest
 			assertThat(false).as("初始化失败");
 		}
 	}
+
+
 
 }

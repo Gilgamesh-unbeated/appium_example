@@ -44,18 +44,6 @@
 	    <artifactId>commons-lang3</artifactId>
 	    <version>3.9</version>
 	</dependency>
-	<dependency>
-	    <groupId>com.codeborne</groupId>
-	    <artifactId>selenide</artifactId>
-	    <version>3.0</version>
-	    <exclusions>
-			<exclusion>
-			<!-- 解决jar版本冲突 -->
-				<groupId>com.google.guava</groupId>
-  					<artifactId>guava</artifactId>
-			</exclusion>
-		</exclusions>
-	</dependency>
 	
   </dependencies>
   
