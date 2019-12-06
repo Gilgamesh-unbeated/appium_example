@@ -10,7 +10,6 @@ public class AfterTest  extends ParentTest
 	@Test
 	public void after() 
 	{
-		sleep(3);
 		driver.quit();
 		LogUtils.info("---end---");
 	}

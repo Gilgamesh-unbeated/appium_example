@@ -35,7 +35,7 @@ public class ConfigManger
 
 	public static void main(String[] args)
 	{
-//		System.out.println("URL:"+getConfig().getProperty(Constants.URL));
+		System.out.println("URL:"+getConfig().getProperty(Constants.BOOKNAME));
 	}
 
 }

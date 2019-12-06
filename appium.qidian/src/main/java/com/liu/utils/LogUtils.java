@@ -1,5 +1,8 @@
 package com.liu.utils;
 
+import static com.liu.utils.Constants.CONFIG_DIR;
+import static com.liu.utils.Constants.LOG4J;
+
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +13,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.liu.enums.LogLevel;
-import static com.liu.utils.Constants.*;
 public class LogUtils
 {
 	static

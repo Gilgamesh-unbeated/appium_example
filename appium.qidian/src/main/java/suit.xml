@@ -7,10 +7,22 @@
 			<class name="com.liu.test.LoginTest">
 		  		<methods>
 					 <include name="before"></include> 
+					 <include name="login"></include>
 				</methods>
 		  	</class>
-		  	
-		  	
+		  	<class name="com.liu.test.AddToBookShelf">
+		  		<methods>
+					 <include name="before"></include> 
+					 <include name="search"></include>
+					 <include name="addToBookShelf"></include>
+				</methods>
+		  	</class>
+		  	<class name="com.liu.test.DeleteFormBookShelf">
+		  		<methods>
+					 <include name="before"></include> 
+					 <include name="deleteFromBookShelf"></include>
+				</methods>
+		  	</class>
 		  	<class name="com.liu.test.AfterTest"/>
 		  
 		

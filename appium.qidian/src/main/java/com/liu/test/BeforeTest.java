@@ -14,8 +14,6 @@ import com.liu.parents.ParentTest;
 import com.liu.utils.Constants;
 import com.liu.utils.LogUtils;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 
 public class BeforeTest extends ParentTest 
@@ -45,7 +43,6 @@ public class BeforeTest extends ParentTest
 			//这里控制是android还是ios,由于暂
 			//时只有android，所以不考虑将手机类型放到配置文件中
 			driver=new AndroidDriver<WebElement>(new URL(Constants.ANDROID_URL), cap);
-			ta=new TouchAction((AppiumDriver) driver);
 		} catch (MalformedURLException e) {
 			LogUtils.error("初始化失败");
 			assertThat(false).as("初始化失败");
